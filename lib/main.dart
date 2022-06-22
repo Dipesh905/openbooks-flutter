@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:openbooks/screens/main_screen.dart';
+import 'package:openbooks/screens/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +15,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const MainScreen());
+        home: const LoginScreen());
   }
 }
