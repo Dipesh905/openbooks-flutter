@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:openbooks/screens/home_screen.dart';
+import 'package:openbooks/screens/main_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,6 +15,6 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const HomeScreen());
+        home: const MainScreen());
   }
 }
