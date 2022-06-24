@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:openbooks/screens/main_screen.dart';
+import 'package:openbooks/utils/auth_helper.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -119,7 +120,13 @@ class LoginScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () async {
+                      try {
+                        await AuthHelper.signInWithGoogle();
+                      } catch (e) {
+                        print(e);
+                      }
+                    },
                     icon: const FaIcon(
                       FontAwesomeIcons.google,
                       color: Colors.white,

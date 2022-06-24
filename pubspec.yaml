@@ -36,6 +36,13 @@ dependencies:
   cupertino_icons: ^1.0.2
   carousel_slider: ^4.1.1
   font_awesome_flutter: ^10.1.0
+  
+  #To use any Firebase Packages
+  firebase_core: ^1.6.0 
+
+  #To enable firebase authentication and google sign in feature
+  firebase_auth: ^3.3.4
+  google_sign_in: ^5.2.1
 
 dev_dependencies:
   flutter_test:

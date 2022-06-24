@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:openbooks/utils/auth_helper.dart';
 
 class HomePageAppBar extends StatelessWidget {
   const HomePageAppBar({
@@ -32,9 +33,15 @@ class HomePageAppBar extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () async {
+            try {
+              await AuthHelper.logOut();
+            } catch (e) {
+              print(e);
+            }
+          },
           icon: const Icon(
-            Icons.person,
+            Icons.exit_to_app,
             color: Colors.black,
           ),
         ),
