@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:openbooks/screens/home_screen.dart';
+import 'package:openbooks/screens/profile_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -22,9 +23,7 @@ class _MainScreenState extends State<MainScreen> {
     Center(
       child: Text("Submit your Poem"),
     ),
-    Center(
-      child: Text("My Profile"),
-    ),
+    ProfileScreen(),
   ];
 
   _onItemTap(int index) {

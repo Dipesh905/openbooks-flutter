@@ -1,11 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:openbooks/functions/top_level_functions.dart';
 import 'package:openbooks/screens/main_screen.dart';
-import 'package:openbooks/utils/auth_helper.dart';
+import 'package:openbooks/screens/profile_screen.dart';
+import 'package:openbooks/utils/google_auth_helper.dart';
 
-class LoginScreen extends StatelessWidget {
+class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
+  @override
+  State<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends State<LoginScreen> {
+  // bool _isLoggedIn = false;
+  // Map _userObj = {};
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -124,7 +134,7 @@ class LoginScreen extends StatelessWidget {
                       try {
                         await AuthHelper.signInWithGoogle();
                       } catch (e) {
-                        print(e);
+                        //  print(e);
                       }
                     },
                     icon: const FaIcon(
@@ -133,7 +143,29 @@ class LoginScreen extends StatelessWidget {
                     ),
                   ),
                   IconButton(
-                    onPressed: () {},
+                    onPressed: () async {
+                      FacebookAuth.instance
+                          .login(permissions: ["public_profile", "email"]).then(
+                        (value) {
+                          FacebookAuth.instance.getUserData().then(
+                            (userData) {
+                              setState(
+                                () {
+                                  // _isLoggedIn = true;
+                                  // _userObj = userData;
+                                  facebookdata = userData;
+                                },
+                              );
+
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (_) => const ProfileScreen()));
+                            },
+                          );
+                        },
+                      );
+                    },
                     icon: const FaIcon(
                       FontAwesomeIcons.facebook,
                       color: Colors.white,

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:openbooks/utils/auth_helper.dart';
+import 'package:openbooks/utils/google_auth_helper.dart';
 
 class HomePageAppBar extends StatelessWidget {
   const HomePageAppBar({
@@ -37,7 +37,7 @@ class HomePageAppBar extends StatelessWidget {
             try {
               await AuthHelper.logOut();
             } catch (e) {
-              print(e);
+              //  print(e);
             }
           },
           icon: const Icon(
