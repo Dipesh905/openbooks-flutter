@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:openbooks/widgets/homepage_appbar.dart';
 import 'package:openbooks/widgets/most_popular_books.dart';
-import 'package:openbooks/widgets/popular_articles.dart';
-import 'package:openbooks/widgets/popular_poems.dart';
-import 'package:openbooks/widgets/popular_stories.dart';
-import 'package:openbooks/widgets/rated_books.dart';
-import 'package:openbooks/widgets/trending_in_books.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
@@ -29,11 +24,11 @@ class HomeScreen extends StatelessWidget {
                 child: ListView(
                   children: const [
                     MostPopularBooks(),
-                    TrendingBooks(),
-                    RatedBooks(),
-                    PopularPoems(),
-                    PopularStories(),
-                    PopularArticles(),
+                    //   TrendingBooks(),
+                    //   RatedBooks(),
+                    //   PopularPoems(),
+                    //   PopularStories(),
+                    //   PopularArticles(),
                   ],
                 ),
               ),

@@ -6,6 +6,8 @@ import 'package:openbooks/screens/main_screen.dart';
 import 'package:openbooks/screens/profile_screen.dart';
 import 'package:openbooks/utils/google_auth_helper.dart';
 
+import 'package:twitter_login/twitter_login.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
 
@@ -168,6 +170,55 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                     icon: const FaIcon(
                       FontAwesomeIcons.facebook,
+                      color: Colors.white,
+                    ),
+                  ),
+                  IconButton(
+                    onPressed: () async {
+                      final twitterLogin = TwitterLogin(
+                        // Consumer API keys
+                        apiKey: "xaT60D3dXvS68lsN072sGNj5A",
+                        // Consumer API Secret keys
+                        apiSecretKey:
+                            'JHy9AoZBOemd7rAkELuUqHB2N4J3uf9GeQnldf1WjuGjMkcaJK',
+                        // Registered Callback URLs in TwitterApp
+                        // Android is a deeplink
+                        // iOS is a URLScheme
+                        redirectURI: 'flutter-twitter-login://',
+                      );
+
+                      await twitterLogin.login().then((value) async {
+                        // print(value.authToken);
+                        // var a = await value.authTokenSecret;
+                        // print(
+                        //     '==============auth token secret ====================');
+                        // print(a);
+                      });
+
+                      // final AuthCredential credential =
+                      //     TwitterAuthProvider.credential(
+                      //         accessToken: authResult.authToken!,
+                      //         secret: authResult.authTokenSecret!);
+                      // await FirebaseAuth.instance
+                      //     .signInWithCredential(credential);
+
+                      // switch (authResult.status!) {
+                      //   case TwitterLoginStatus.loggedIn:
+                      //     print('login sucess');
+                      //     // success
+                      //     break;
+                      //   case TwitterLoginStatus.cancelledByUser:
+                      //     // cancel
+                      //     print('cancelledbyuser');
+                      //     break;
+                      //   case TwitterLoginStatus.error:
+                      //     // error
+                      //     print('login error');
+                      //     break;
+                      // }
+                    },
+                    icon: const FaIcon(
+                      FontAwesomeIcons.twitter,
                       color: Colors.white,
                     ),
                   ),

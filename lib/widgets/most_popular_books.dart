@@ -21,13 +21,7 @@ class MostPopularBooks extends StatelessWidget {
         SizedBox(
           height: MediaQuery.of(context).size.height * 0.2092,
           width: double.infinity,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: 8,
-            itemBuilder: (BuildContext context, int index) {
-              return const BooksDetailCard();
-            },
-          ),
+          child: const BooksDetailCard(),
         ),
       ],
     );
