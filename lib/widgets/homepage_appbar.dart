@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:openbooks/screens/search_screen.dart';
 import 'package:openbooks/utils/google_auth_helper.dart';
 
 class HomePageAppBar extends StatelessWidget {
@@ -12,7 +13,7 @@ class HomePageAppBar extends StatelessWidget {
       children: [
         Container(
           height: MediaQuery.of(context).size.height * 0.05,
-          width: MediaQuery.of(context).size.width * 0.7,
+          width: MediaQuery.of(context).size.width * 0.55,
           decoration: BoxDecoration(
               color: Colors.grey[400], borderRadius: BorderRadius.circular(10)),
           child: Center(
@@ -23,6 +24,16 @@ class HomePageAppBar extends StatelessWidget {
                   prefixIcon: Icon(Icons.search),
                   hintText: 'Search'),
             ),
+          ),
+        ),
+        IconButton(
+          onPressed: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (_) => const SearchScreen()));
+          },
+          icon: const Icon(
+            Icons.search,
+            color: Colors.black,
           ),
         ),
         IconButton(
