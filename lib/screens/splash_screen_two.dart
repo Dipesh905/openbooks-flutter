@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:openbooks/const/colors.dart';
+import 'package:openbooks/screens/third_splash_screen.dart';
 
 class SecondSplashScreen extends StatelessWidget {
   const SecondSplashScreen({Key? key}) : super(key: key);
@@ -20,7 +21,7 @@ class SecondSplashScreen extends StatelessWidget {
             width: double.infinity,
             decoration: BoxDecoration(
               color: AppColor.darkbackgroundcolor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(30),
                 topRight: Radius.circular(30),
               ),
@@ -30,7 +31,7 @@ class SecondSplashScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'An open source library to create and read literature',
                     style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
                   ),
@@ -41,11 +42,9 @@ class SecondSplashScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       OutlinedButton(
-                          style: ButtonStyle(),
-                          onPressed: () {},
-                          child: Text('Skip')),
+                          onPressed: () {}, child: const Text('Skip')),
                       Row(
-                        children: [
+                        children: const [
                           CircleAvatar(
                             radius: 8,
                           ),
@@ -66,11 +65,16 @@ class SecondSplashScreen extends StatelessWidget {
                         ],
                       ),
                       OutlinedButton(
-                          style: ButtonStyle(),
-                          onPressed: () {},
-                          child: Text('Next')),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (_) => const ThirdSplashScreen()));
+                        },
+                        child: const Text('Next'),
+                      ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),

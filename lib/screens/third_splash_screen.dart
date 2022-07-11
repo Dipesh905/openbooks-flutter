@@ -21,7 +21,7 @@ class ThirdSplashScreen extends StatelessWidget {
             width: double.infinity,
             decoration: BoxDecoration(
               color: AppColor.darkbackgroundcolor,
-              borderRadius: BorderRadius.only(
+              borderRadius: const BorderRadius.only(
                 topLeft: Radius.circular(30),
                 topRight: Radius.circular(30),
               ),
@@ -31,7 +31,7 @@ class ThirdSplashScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
+                  const Text(
                     'Recommendations based on interests and authors nearby',
                     style: TextStyle(fontSize: 27, fontWeight: FontWeight.bold),
                   ),
@@ -42,11 +42,9 @@ class ThirdSplashScreen extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
                       OutlinedButton(
-                          style: ButtonStyle(),
-                          onPressed: () {},
-                          child: Text('Skip')),
+                          onPressed: () {}, child: const Text('Skip')),
                       Row(
-                        children: [
+                        children: const [
                           CircleAvatar(
                             backgroundColor: Colors.black,
                             radius: 8,
@@ -67,7 +65,6 @@ class ThirdSplashScreen extends StatelessWidget {
                         ],
                       ),
                       OutlinedButton(
-                          style: ButtonStyle(),
                           onPressed: () {
                             Navigator.push(
                                 context,
@@ -75,7 +72,7 @@ class ThirdSplashScreen extends StatelessWidget {
                                     builder: (_) =>
                                         const FourthSplashScreen()));
                           },
-                          child: Text('Next')),
+                          child: const Text('Next')),
                     ],
                   )
                 ],

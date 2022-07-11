@@ -13,10 +13,10 @@ class ReUsableTopicSection extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           Text(
-            title.toUpperCase(),
+            title,
             style: const TextStyle(
               fontWeight: FontWeight.bold,
-              color: Colors.deepPurple,
+              //  color: Colors.deepPurple,
             ),
           ),
         ],

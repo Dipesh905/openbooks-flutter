@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'package:openbooks/const/colors.dart';
+import 'package:openbooks/screens/login_screen.dart';
 
 class FourthSplashScreen extends StatelessWidget {
   const FourthSplashScreen({Key? key}) : super(key: key);
@@ -100,8 +101,12 @@ class FourthSplashScreen extends StatelessWidget {
                     height: MediaQuery.of(context).size.height * 0.2,
                   ),
                   OutlinedButton(
-                      style: const ButtonStyle(),
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => const LoginScreen()));
+                      },
                       child: const Text('Skip')),
                   const SizedBox(
                     height: 10,

@@ -38,7 +38,9 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
         body: tabs[_selectedIndex],
         bottomNavigationBar: CurvedNavigationBar(
-          height: 50,
+          height: 60,
+          color: Colors.blue,
+          backgroundColor: Colors.transparent,
           //  currentIndex: _selectedIndex,
           onTap: _onItemTap,
           items: const [

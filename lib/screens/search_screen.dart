@@ -51,7 +51,7 @@ class _SearchScreenState extends State<SearchScreen> {
             // print(book.bookTitle);
             // print(book.bookDiscription);
             // print(book.bookWriter);
-            Navigator.push(
+            Navigator.pushReplacement(
               context,
               MaterialPageRoute(
                 builder: (_) => BooksDetailScreen(

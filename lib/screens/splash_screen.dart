@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:openbooks/const/colors.dart';
-import 'package:openbooks/screens/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -15,7 +14,7 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
 
     // Future.delayed(const Duration(seconds: 5));
-    print('5 second completed');
+
     // Navigator.push(
     //     context, MaterialPageRoute(builder: (_) => const LoginScreen()));
   }
