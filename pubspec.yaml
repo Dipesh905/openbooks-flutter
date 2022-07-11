@@ -47,6 +47,8 @@ dependencies:
   firebase_auth: ^3.3.4
   google_sign_in: ^5.2.1
 
+  curved_navigation_bar: ^1.0.3
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
