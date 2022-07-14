@@ -1,5 +1,6 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:openbooks/screens/categories_screen.dart';
 import 'package:openbooks/screens/home_screen.dart';
 import 'package:openbooks/screens/profile_screen.dart';
 
@@ -11,19 +12,17 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 2;
 
   List tabs = const [
-    HomeScreen(),
     Center(
       child: Text("Favourite Page"),
     ),
     Center(
       child: Text("Download Page"),
     ),
-    Center(
-      child: Text("Submit your Poem"),
-    ),
+    HomeScreen(),
+    CategoriesPage(),
     ProfileScreen(),
   ];
 
@@ -44,9 +43,9 @@ class _MainScreenState extends State<MainScreen> {
           //  currentIndex: _selectedIndex,
           onTap: _onItemTap,
           items: const [
-            Icon(Icons.home),
             Icon(Icons.favorite_border),
             Icon(Icons.download),
+            Icon(Icons.home),
             Icon(Icons.edit),
             Icon(Icons.person)
 
