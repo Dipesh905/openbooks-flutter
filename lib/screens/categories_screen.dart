@@ -14,63 +14,7 @@ class CategoriesPage extends StatelessWidget {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.039,
             ),
-            Container(
-              height: MediaQuery.of(context).size.height * 0.15,
-              width: double.infinity,
-              decoration: const BoxDecoration(
-                  color: Colors.amber,
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20))),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      const Icon(Icons.search),
-                      Container(
-                        width: MediaQuery.of(context).size.width * 0.7,
-                        height: 40,
-                        decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(20)),
-                        child: TextFormField(
-                          decoration:
-                              const InputDecoration(border: InputBorder.none),
-                        ),
-                      ),
-                      IconButton(
-                          onPressed: () {}, icon: const Icon(Icons.menu_open))
-                    ],
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: const [
-                        CategoryButton(title: 'Romance'),
-                        SizedBox(
-                          width: 3,
-                        ),
-                        CategoryButton(title: 'Sci-fi'),
-                        SizedBox(
-                          width: 3,
-                        ),
-                        CategoryButton(title: 'Thillar'),
-                        SizedBox(
-                          width: 3,
-                        ),
-                        CategoryButton(title: 'Fantasy'),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            const CategorySearchAppBar(),
             Padding(
               padding: const EdgeInsets.all(16),
               child: Column(
@@ -100,6 +44,71 @@ class CategoriesPage extends StatelessWidget {
             )
           ],
         ),
+      ),
+    );
+  }
+}
+
+class CategorySearchAppBar extends StatelessWidget {
+  const CategorySearchAppBar({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: MediaQuery.of(context).size.height * 0.15,
+      width: double.infinity,
+      decoration: const BoxDecoration(
+          color: Colors.amber,
+          borderRadius: BorderRadius.only(
+              bottomLeft: Radius.circular(20),
+              bottomRight: Radius.circular(20))),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              const Icon(Icons.search),
+              Container(
+                width: MediaQuery.of(context).size.width * 0.7,
+                height: 40,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20)),
+                child: TextFormField(
+                  decoration: const InputDecoration(border: InputBorder.none),
+                ),
+              ),
+              IconButton(onPressed: () {}, icon: const Icon(Icons.menu_open))
+            ],
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              children: const [
+                CategoryButton(title: 'Romance'),
+                SizedBox(
+                  width: 3,
+                ),
+                CategoryButton(title: 'Sci-fi'),
+                SizedBox(
+                  width: 3,
+                ),
+                CategoryButton(title: 'Thillar'),
+                SizedBox(
+                  width: 3,
+                ),
+                CategoryButton(title: 'Fantasy'),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }

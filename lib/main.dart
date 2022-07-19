@@ -1,6 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:openbooks/screens/main_screen.dart';
+import 'package:openbooks/screens/splash_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,6 +26,6 @@ class CheckLoginScreen extends StatefulWidget {
 class _CheckLoginScreenState extends State<CheckLoginScreen> {
   @override
   Widget build(BuildContext context) {
-    return const MainScreen();
+    return const SplashScreen();
   }
 }

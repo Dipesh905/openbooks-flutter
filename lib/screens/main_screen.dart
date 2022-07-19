@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:openbooks/screens/categories_screen.dart';
 import 'package:openbooks/screens/home_screen.dart';
 import 'package:openbooks/screens/profile_screen.dart';
+import 'package:openbooks/screens/stories_books_screen.dart';
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
@@ -18,9 +19,7 @@ class _MainScreenState extends State<MainScreen> {
     Center(
       child: Text("Favourite Page"),
     ),
-    Center(
-      child: Text("Download Page"),
-    ),
+    StoriesBookPage(),
     HomeScreen(),
     CategoriesPage(),
     ProfileScreen(),
@@ -44,34 +43,11 @@ class _MainScreenState extends State<MainScreen> {
           onTap: _onItemTap,
           items: const [
             Icon(Icons.favorite_border),
-            Icon(Icons.download),
+            Icon(Icons.book),
             Icon(Icons.home),
             Icon(Icons.edit),
             Icon(Icons.person)
-
-            // BottomNavigationBarItem(
-            //     icon: , label: "Favourite"),
-            // BottomNavigationBarItem(
-            //     icon: , label: "Download"),
-            // BottomNavigationBarItem(icon: , label: "Write Post"),
-            // BottomNavigationBarItem(icon: , label: "Profile"),
           ],
-        )
-
-        // BottomNavigationBar(
-        //   type: BottomNavigationBarType.fixed,
-        //   items: const [
-        //     BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-        //     BottomNavigationBarItem(
-        //         icon: Icon(Icons.favorite_border), label: "Favourite"),
-        //     BottomNavigationBarItem(
-        //         icon: Icon(Icons.download), label: "Download"),
-        //     BottomNavigationBarItem(icon: Icon(Icons.edit), label: "Write Post"),
-        //     BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
-        //   ],
-        //   currentIndex: _selectedIndex,
-        //   onTap: _onItemTap,
-        // ),
-        );
+        ));
   }
 }

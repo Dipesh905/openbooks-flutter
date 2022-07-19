@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:openbooks/const/colors.dart';
+import 'package:openbooks/screens/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -12,11 +13,14 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
+    goToLoginScreen(context);
+  }
 
-    // Future.delayed(const Duration(seconds: 5));
+  Future<void> goToLoginScreen(BuildContext context) async {
+    await Future.delayed(const Duration(seconds: 5));
 
-    // Navigator.push(
-    //     context, MaterialPageRoute(builder: (_) => const LoginScreen()));
+    Navigator.pushReplacement(
+        context, MaterialPageRoute(builder: (context) => const LoginScreen()));
   }
 
   @override

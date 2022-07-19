@@ -15,6 +15,7 @@ class ReUsableTopicSection extends StatelessWidget {
           Text(
             title,
             style: const TextStyle(
+              fontSize: 18,
               fontWeight: FontWeight.bold,
               //  color: Colors.deepPurple,
             ),

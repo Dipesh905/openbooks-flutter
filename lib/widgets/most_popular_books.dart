@@ -28,7 +28,7 @@ class MostPopularBooks extends StatelessWidget {
           ],
         ),
         SizedBox(
-          height: MediaQuery.of(context).size.height * 0.2092,
+          height: MediaQuery.of(context).size.height * 0.3,
           width: double.infinity,
           child: const BooksDetailCard(),
         ),
