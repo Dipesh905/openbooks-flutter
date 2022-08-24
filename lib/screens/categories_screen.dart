@@ -23,22 +23,22 @@ class CategoriesPage extends StatelessWidget {
                     height: 15,
                   ),
                   CategoriesListWidget(
-                      title: 'Stories', image: 'assets/math.PNG'),
+                      title: 'Stories', image: 'assets/stories.PNG'),
                   SizedBox(
                     height: 15,
                   ),
                   CategoriesListWidget(
-                      title: 'Poem', image: 'assets/chemistry.PNG'),
+                      title: 'Poem', image: 'assets/poems.PNG'),
                   SizedBox(
                     height: 15,
                   ),
                   CategoriesListWidget(
-                      title: 'Articles', image: 'assets/physics.PNG'),
+                      title: 'Articles', image: 'assets/articles.PNG'),
                   SizedBox(
                     height: 15,
                   ),
                   CategoriesListWidget(
-                      title: 'Diaries', image: 'assets/science.PNG')
+                      title: 'Diaries', image: 'assets/dairy_book.PNG')
                 ],
               ),
             )

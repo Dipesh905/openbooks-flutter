@@ -22,7 +22,7 @@ class _MainScreenState extends State<MainScreen> {
     StoriesBookPage(),
     HomeScreen(),
     CategoriesPage(),
-    ProfileScreen(),
+    ProfileScreen()
   ];
 
   _onItemTap(int index) {
@@ -36,6 +36,7 @@ class _MainScreenState extends State<MainScreen> {
     return Scaffold(
         body: tabs[_selectedIndex],
         bottomNavigationBar: CurvedNavigationBar(
+          index: _selectedIndex,
           height: 60,
           color: Colors.blue,
           backgroundColor: Colors.transparent,

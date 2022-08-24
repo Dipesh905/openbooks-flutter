@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:openbooks/const/colors.dart';
 import 'package:openbooks/functions/top_level_functions.dart';
 import 'package:openbooks/screens/main_screen.dart';
 import 'package:openbooks/screens/profile_screen.dart';
@@ -40,20 +41,20 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Column(
             children: <Widget>[
               Container(
-                height: MediaQuery.of(context).size.height * 0.4,
-                width: double.infinity,
-                color: Colors.green,
-              ),
+                  height: MediaQuery.of(context).size.height * 0.4,
+                  width: double.infinity,
+                  color: AppColor.lightbackGroundColor,
+                  child: Image.asset('assets/openbook.png')),
               const SizedBox(
                 height: 20,
               ),
-              const Text(
-                "Open Books",
-                style: TextStyle(
-                    fontSize: 24,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold),
-              ),
+              // const Text(
+              //   "Open Books",
+              //   style: TextStyle(
+              //       fontSize: 24,
+              //       color: Colors.white,
+              //       fontWeight: FontWeight.bold),
+              // ),
               const SizedBox(
                 height: 20,
               ),
@@ -135,6 +136,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     onPressed: () async {
                       try {
                         await AuthHelper.signInWithGoogle();
+                        // print(
+                        //     '=============Sign In with Google Response ===========================');
+                        // print(AuthHelper.signInWithGoogle());
+
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (_) => const MainScreen()));
                       } catch (e) {
                         //  print(e);
                       }

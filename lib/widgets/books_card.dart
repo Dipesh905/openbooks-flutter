@@ -18,10 +18,10 @@ class BooksCard extends StatelessWidget {
       margin: const EdgeInsets.all(2),
       height: MediaQuery.of(context).size.height * 0.6,
       width: MediaQuery.of(context).size.width * 0.2,
-      decoration: BoxDecoration(
-          //  color: Colors.blue,
-          // borderRadius: BorderRadius.circular(15),
-          ),
+      // decoration: BoxDecoration(
+      //     //  color: Colors.blue,
+      //     // borderRadius: BorderRadius.circular(15),
+      //     ),
       child: Column(
         children: [
           Container(

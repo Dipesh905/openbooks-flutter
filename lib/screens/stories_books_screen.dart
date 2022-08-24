@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:openbooks/screens/categories_screen.dart';
 import 'package:openbooks/widgets/books_card.dart';
-import 'package:openbooks/widgets/books_details_card.dart';
 
 class StoriesBookPage extends StatelessWidget {
   const StoriesBookPage({Key? key}) : super(key: key);
@@ -19,7 +17,7 @@ class StoriesBookPage extends StatelessWidget {
 
             const CategorySearchAppBar(),
 
-            Container(
+            SizedBox(
               //  color: Colors.amber,
               height: MediaQuery.of(context).size.height * 0.8,
               width: double.infinity,
@@ -32,7 +30,7 @@ class StoriesBookPage extends StatelessWidget {
                   return SizedBox(
                     height: MediaQuery.of(context).size.height * 0.5,
                     // width: MediaQuery.of(context).size.width * 0.2,
-                    child: BooksCard(
+                    child: const BooksCard(
                         bookTitle: 'title',
                         bookImage: 'assets/science.PNG',
                         bookAuthor: 'author'),

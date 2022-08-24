@@ -35,15 +35,16 @@ class _BooksDetailCardState extends State<BooksDetailCard> {
           },
           child: Column(
             children: [
-              Container(
-                  height: MediaQuery.of(context).size.height * 0.28,
-                  width: MediaQuery.of(context).size.width * 0.38,
-                  // color: Colors.red,
-                  child: BooksCard(
-                    bookTitle: listofBooks[index].bookTitle,
-                    bookImage: listofBooks[index].bookimage,
-                    bookAuthor: listofBooks[index].bookWriter,
-                  )),
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.28,
+                width: MediaQuery.of(context).size.width * 0.38,
+                // color: Colors.red,
+                child: BooksCard(
+                  bookTitle: listofBooks[index].bookTitle,
+                  bookImage: listofBooks[index].bookimage,
+                  bookAuthor: listofBooks[index].bookWriter,
+                ),
+              ),
             ],
           ),
         );
